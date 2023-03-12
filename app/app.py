@@ -31,7 +31,7 @@ def sendin_to_gpt(text_data ,data,model):
     response = openai.Completion.create(
         engine=model,
         prompt=text_data + data,
-        max_tokens=4000,
+        max_tokens=1000,
         n=1,
         stop=None,
         temperature=0.5,
