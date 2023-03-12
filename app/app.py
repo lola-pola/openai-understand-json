@@ -20,7 +20,7 @@ def json_cutter(filename,split_length):
        print('test')
        sub_list = list(sub)
        master_list.append(sub_list)
-       st.success('Done!')
+    st.success('done parsing json!')
     return master_list
 
 
@@ -31,7 +31,7 @@ def sendin_to_gpt(text_data ,data,model):
     response = openai.Completion.create(
         engine=model,
         prompt=text_data + data,
-        max_tokens=1024,
+        max_tokens=4000,
         n=1,
         stop=None,
         temperature=0.5,
